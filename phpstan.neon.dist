@@ -1,0 +1,12 @@
+parameters:
+    level: 7
+    paths:
+        - src
+        - tests
+    ignoreErrors:
+        - '#Access to an undefined property object::\$[a-zA-Z0-9_]+\.#'
+        - '#Call to protected method sql\(\) of class Framework\\Database\\Definition\\Table\\Columns\\Column\.#'
+        - '#Call to protected method sql\(\) of class Framework\\Database\\Definition\\Table\\Indexes\\IndexDefinition\.#'
+        - '#Call to protected method sql\(\) of class Framework\\Database\\Definition\\Table\\Indexes\\Index\.#'
+        - '#Call to protected method sql\(\) of class Framework\\Database\\Definition\\Table\\TableDefinition\.#'
+        - '#Cannot access offset [0-9]+ on array<int, Framework\\Database\\Result\\Field>\|false\.#'
