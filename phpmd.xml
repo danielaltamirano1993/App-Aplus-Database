@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<ruleset name="Mess Detector">
+    <!-- cleancode -->
+    <rule ref="rulesets/cleancode.xml">
+        <exclude name="BooleanArgumentFlag"/>
+    </rule>
+    <!-- codesize -->
+    <rule ref="rulesets/codesize.xml/TooManyPublicMethods">
+        <properties>
+            <property name="maxmethods" value="40"/>
+        </properties>
+    </rule>
+    <!-- controversial -->
+    <rule ref="rulesets/controversial.xml"/>
+    <!-- design -->
+    <rule ref="rulesets/design.xml/CouplingBetweenObjects">
+        <properties>
+            <property name="maximum" value="40"/>
+        </properties>
+    </rule>
+    <rule ref="rulesets/design.xml/NumberOfChildren">
+        <properties>
+            <property name="minimum" value="25"/>
+        </properties>
+    </rule>
+    <!-- naming -->
+    <rule ref="rulesets/naming.xml/ShortVariable">
+        <properties>
+            <property name="minimum" value="2"/>
+        </properties>
+    </rule>
+    <!-- unusedcode -->
+    <rule ref="rulesets/unusedcode.xml"/>
+</ruleset>
