@@ -1,0 +1,298 @@
+<?php
+/*
+ * This file is part of Aplus Framework Database Library.
+ *
+ * (c) Natan Felles <natanfelles@gmail.com>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+namespace PHPSTORM_META;
+
+registerArgumentsSet(
+    'charsets',
+    'armscii8',
+    'ascii',
+    'big5',
+    'binary',
+    'cp1250',
+    'cp1251',
+    'cp1256',
+    'cp1257',
+    'cp850',
+    'cp852',
+    'cp866',
+    'cp932',
+    'dec8',
+    'eucjpms',
+    'euckr',
+    'gb2312',
+    'gbk',
+    'geostd8',
+    'greek',
+    'hebrew',
+    'hp8',
+    'keybcs2',
+    'koi8r',
+    'koi8u',
+    'latin1',
+    'latin2',
+    'latin5',
+    'latin7',
+    'macce',
+    'macroman',
+    'sjis',
+    'swe7',
+    'tis620',
+    'ucs2',
+    'ujis',
+    'utf16',
+    'utf16le',
+    'utf32',
+    'utf8',
+    'utf8mb3',
+    'utf8mb4',
+);
+expectedArguments(
+    \Framework\Database\Database::setCollations(),
+    0,
+    argumentsSet('charsets')
+);
+expectedArguments(
+    \Framework\Database\Definition\AlterSchema::charset(),
+    0,
+    argumentsSet('charsets')
+);
+expectedArguments(
+    \Framework\Database\Definition\AlterTable::charset(),
+    0,
+    argumentsSet('charsets')
+);
+expectedArguments(
+    \Framework\Database\Definition\AlterTable::convertToCharset(),
+    0,
+    argumentsSet('charsets')
+);
+expectedArguments(
+    \Framework\Database\Definition\CreateSchema::charset(),
+    0,
+    argumentsSet('charsets')
+);
+expectedArguments(
+    \Framework\Database\Definition\Table\Columns\String\StringDataType::charset(),
+    0,
+    argumentsSet('charsets')
+);
+expectedArguments(
+    \Framework\Database\Manipulation\LoadData::charset(),
+    0,
+    argumentsSet('charsets')
+);
+expectedArguments(
+    \Framework\Database\Manipulation\Select::intoOutfile(),
+    1,
+    argumentsSet('charsets')
+);
+registerArgumentsSet(
+    'definition_alter_table_algo',
+    \Framework\Database\Definition\AlterTable::ALGO_COPY,
+    \Framework\Database\Definition\AlterTable::ALGO_DEFAULT,
+    \Framework\Database\Definition\AlterTable::ALGO_INPLACE,
+    \Framework\Database\Definition\AlterTable::ALGO_INSTANT,
+    \Framework\Database\Definition\AlterTable::ALGO_NOCOPY,
+);
+expectedArguments(
+    \Framework\Database\Definition\AlterTable::algorithm(),
+    0,
+    argumentsSet('definition_alter_table_algo')
+);
+registerArgumentsSet(
+    'definition_alter_table_lock',
+    \Framework\Database\Definition\AlterTable::LOCK_DEFAULT,
+    \Framework\Database\Definition\AlterTable::LOCK_EXCLUSIVE,
+    \Framework\Database\Definition\AlterTable::LOCK_NONE,
+    \Framework\Database\Definition\AlterTable::LOCK_SHARED,
+);
+expectedArguments(
+    \Framework\Database\Definition\AlterTable::lock(),
+    0,
+    argumentsSet('definition_alter_table_lock')
+);
+registerArgumentsSet(
+    'manipulation_delete_opt',
+    \Framework\Database\Manipulation\Delete::OPT_IGNORE,
+    \Framework\Database\Manipulation\Delete::OPT_LOW_PRIORITY,
+    \Framework\Database\Manipulation\Delete::OPT_QUICK,
+);
+expectedArguments(
+    \Framework\Database\Manipulation\Delete::options(),
+    0,
+    argumentsSet('manipulation_delete_opt')
+);
+registerArgumentsSet(
+    'manipulation_insert_opt',
+    \Framework\Database\Manipulation\Insert::OPT_DELAYED,
+    \Framework\Database\Manipulation\Insert::OPT_HIGH_PRIORITY,
+    \Framework\Database\Manipulation\Insert::OPT_IGNORE,
+    \Framework\Database\Manipulation\Insert::OPT_LOW_PRIORITY,
+);
+expectedArguments(
+    \Framework\Database\Manipulation\Insert::options(),
+    0,
+    argumentsSet('manipulation_insert_opt')
+);
+registerArgumentsSet(
+    'manipulation_load_data_opt',
+    \Framework\Database\Manipulation\LoadData::OPT_CONCURRENT,
+    \Framework\Database\Manipulation\LoadData::OPT_LOCAL,
+    \Framework\Database\Manipulation\LoadData::OPT_LOW_PRIORITY,
+);
+expectedArguments(
+    \Framework\Database\Manipulation\LoadData::options(),
+    0,
+    argumentsSet('manipulation_load_data_opt')
+);
+registerArgumentsSet(
+    'manipulation_replace_opt',
+    \Framework\Database\Manipulation\Replace::OPT_DELAYED,
+    \Framework\Database\Manipulation\Replace::OPT_LOW_PRIORITY,
+);
+expectedArguments(
+    \Framework\Database\Manipulation\Replace::options(),
+    0,
+    argumentsSet('manipulation_replace_opt')
+);
+registerArgumentsSet(
+    'manipulation_select_opt',
+    \Framework\Database\Manipulation\Select::OPT_ALL,
+    \Framework\Database\Manipulation\Select::OPT_DISTINCT,
+    \Framework\Database\Manipulation\Select::OPT_DISTINCTROW,
+    \Framework\Database\Manipulation\Select::OPT_HIGH_PRIORITY,
+    \Framework\Database\Manipulation\Select::OPT_SQL_BIG_RESULT,
+    \Framework\Database\Manipulation\Select::OPT_SQL_BUFFER_RESULT,
+    \Framework\Database\Manipulation\Select::OPT_SQL_CACHE,
+    \Framework\Database\Manipulation\Select::OPT_SQL_CALC_FOUND_ROWS,
+    \Framework\Database\Manipulation\Select::OPT_SQL_NO_CACHE,
+    \Framework\Database\Manipulation\Select::OPT_SQL_SMALL_RESULT,
+    \Framework\Database\Manipulation\Select::OPT_STRAIGHT_JOIN,
+);
+expectedArguments(
+    \Framework\Database\Manipulation\Select::options(),
+    0,
+    argumentsSet('manipulation_select_opt')
+);
+registerArgumentsSet(
+    'manipulation_update_opt',
+    \Framework\Database\Manipulation\Update::OPT_IGNORE,
+    \Framework\Database\Manipulation\Update::OPT_LOW_PRIORITY,
+);
+expectedArguments(
+    \Framework\Database\Manipulation\Update::options(),
+    0,
+    argumentsSet('manipulation_update_opt')
+);
+registerArgumentsSet(
+    'manipulation_with_opt',
+    \Framework\Database\Manipulation\With::OPT_RECURSIVE
+);
+expectedArguments(
+    \Framework\Database\Manipulation\With::options(),
+    0,
+    argumentsSet('manipulation_with_opt')
+);
+registerArgumentsSet(
+    'foreign_key_opt',
+    \Framework\Database\Definition\Table\Indexes\Keys\ForeignKey::OPT_CASCADE,
+    \Framework\Database\Definition\Table\Indexes\Keys\ForeignKey::OPT_NO_ACTION,
+    \Framework\Database\Definition\Table\Indexes\Keys\ForeignKey::OPT_RESTRICT,
+    \Framework\Database\Definition\Table\Indexes\Keys\ForeignKey::OPT_SET_NULL,
+);
+expectedArguments(
+    \Framework\Database\Definition\Table\Indexes\Keys\ForeignKey::onDelete(),
+    0,
+    argumentsSet('foreign_key_opt')
+);
+expectedArguments(
+    \Framework\Database\Definition\Table\Indexes\Keys\ForeignKey::onUpdate(),
+    0,
+    argumentsSet('foreign_key_opt')
+);
+registerArgumentsSet(
+    'table_options',
+    \Framework\Database\Definition\Table\TableStatement::OPT_AUTO_INCREMENT,
+    \Framework\Database\Definition\Table\TableStatement::OPT_AVG_ROW_LENGTH,
+    \Framework\Database\Definition\Table\TableStatement::OPT_CHARSET,
+    \Framework\Database\Definition\Table\TableStatement::OPT_CHECKSUM,
+    \Framework\Database\Definition\Table\TableStatement::OPT_COLLATE,
+    \Framework\Database\Definition\Table\TableStatement::OPT_COMMENT,
+    \Framework\Database\Definition\Table\TableStatement::OPT_CONNECTION,
+    \Framework\Database\Definition\Table\TableStatement::OPT_DATA_DIRECTORY,
+    \Framework\Database\Definition\Table\TableStatement::OPT_DELAY_KEY_WRITE,
+    \Framework\Database\Definition\Table\TableStatement::OPT_ENCRYPTED,
+    \Framework\Database\Definition\Table\TableStatement::OPT_ENCRYPTION_KEY_ID,
+    \Framework\Database\Definition\Table\TableStatement::OPT_ENGINE,
+    \Framework\Database\Definition\Table\TableStatement::OPT_IETF_QUOTES,
+    \Framework\Database\Definition\Table\TableStatement::OPT_INDEX_DIRECTORY,
+    \Framework\Database\Definition\Table\TableStatement::OPT_INSERT_METHOD,
+    \Framework\Database\Definition\Table\TableStatement::OPT_KEY_BLOCK_SIZE,
+    \Framework\Database\Definition\Table\TableStatement::OPT_MAX_ROWS,
+    \Framework\Database\Definition\Table\TableStatement::OPT_MIN_ROWS,
+    \Framework\Database\Definition\Table\TableStatement::OPT_PACK_KEYS,
+    \Framework\Database\Definition\Table\TableStatement::OPT_PAGE_CHECKSUM,
+    \Framework\Database\Definition\Table\TableStatement::OPT_PAGE_COMPRESSED,
+    \Framework\Database\Definition\Table\TableStatement::OPT_PAGE_COMPRESSION_LEVEL,
+    \Framework\Database\Definition\Table\TableStatement::OPT_PASSWORD,
+    \Framework\Database\Definition\Table\TableStatement::OPT_ROW_FORMAT,
+    \Framework\Database\Definition\Table\TableStatement::OPT_SEQUENCE,
+    \Framework\Database\Definition\Table\TableStatement::OPT_STATS_AUTO_RECALC,
+    \Framework\Database\Definition\Table\TableStatement::OPT_STATS_PERSISTENT,
+    \Framework\Database\Definition\Table\TableStatement::OPT_STATS_SAMPLE_PAGES,
+    \Framework\Database\Definition\Table\TableStatement::OPT_TABLESPACE,
+    \Framework\Database\Definition\Table\TableStatement::OPT_TRANSACTIONAL,
+    \Framework\Database\Definition\Table\TableStatement::OPT_UNION,
+    \Framework\Database\Definition\Table\TableStatement::OPT_WITH_SYSTEM_VERSIONING,
+);
+expectedArguments(
+    \Framework\Database\Definition\Table\TableStatement::option(),
+    0,
+    argumentsSet('table_options')
+);
+registerArgumentsSet(
+    'operators',
+    '=',
+    '<=>',
+    '!=',
+    '<>',
+    '>',
+    '>=',
+    '<',
+    '<=',
+    'LIKE',
+    'NOT LIKE',
+    'IN',
+    'NOT IN',
+    'BETWEEN',
+    'NOT BETWEEN',
+    'IS NULL',
+    'IS NOT NULL',
+);
+expectedArguments(
+    \Framework\Database\Manipulation\Traits\Having::having(),
+    1,
+    argumentsSet('operators')
+);
+expectedArguments(
+    \Framework\Database\Manipulation\Traits\Having::orHaving(),
+    1,
+    argumentsSet('operators')
+);
+expectedArguments(
+    \Framework\Database\Manipulation\Traits\Where::where(),
+    1,
+    argumentsSet('operators')
+);
+expectedArguments(
+    \Framework\Database\Manipulation\Traits\Where::orWhere(),
+    1,
+    argumentsSet('operators')
+);
